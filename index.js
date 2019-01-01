@@ -4,10 +4,10 @@ var app = express()
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
 
-var value = 0;
+var value = '0';
 
 app.get('/', function(request, response) {
-  response.set('text/plain').status(200).send(value);
+  response.send(value);
 })
 
 app.post('/', function(request, response) {
