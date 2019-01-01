@@ -1,7 +1,9 @@
 var express = require('express')
+const bodyParser = require('body-parser');
 var app = express()
 
 app.set('port', (process.env.PORT || 5000))
+app.use(bodyParser);
 app.use(express.static(__dirname + '/public'))
 
 var value = '0';
