@@ -12,7 +12,7 @@ app.get('/value', function(request, response) {
 
 app.post('/value', function(request, response) {
 	value = request.body;
-	response.status(200);
+	response.status(200).send();
  })
  
 app.listen(app.get('port'), function() {
