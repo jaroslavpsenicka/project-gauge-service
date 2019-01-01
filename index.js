@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'))
 var value = 0;
 
 app.get('/', function(request, response) {
-  response.send(value)
+  response.set('text/plain').status(200).send(value);
 })
 
 app.post('/', function(request, response) {
