@@ -6,11 +6,11 @@ app.use(express.static(__dirname + '/public'))
 
 var value = '0';
 
-app.get('/', function(request, response) {
+app.get('/value', function(request, response) {
   response.send(value);
 })
 
-app.post('/', function(request, response) {
+app.post('/value', function(request, response) {
 	value = request.body;
  })
  
