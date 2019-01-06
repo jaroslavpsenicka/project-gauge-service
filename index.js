@@ -6,7 +6,7 @@ app.set('port', (process.env.PORT || 5000))
 app.use(bodyParser.text());
 app.use(express.static(__dirname + '/public'))
 
-var value = '0';
+var value = '90';
 
 app.get('/value', function(request, response) {
   response.send(value);
